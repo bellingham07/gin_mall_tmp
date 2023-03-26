@@ -1,6 +1,7 @@
 package conf
 
 import (
+	"gin_mall_tmp/dao"
 	"gopkg.in/ini.v1"
 	"strings"
 )

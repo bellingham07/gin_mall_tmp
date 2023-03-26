@@ -1,7 +1,12 @@
 package main
 
-import "fmt"
+import (
+	"gin_mall_tmp/conf"
+	"gin_mall_tmp/routes"
+)
 
 func main() {
-	fmt.Println("hello world caojinbo")
+	conf.Init()
+	r := routes.NewRouter()
+	_ = r.Run(conf.HttpPort)
 }

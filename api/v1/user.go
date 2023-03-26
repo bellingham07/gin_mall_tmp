@@ -14,5 +14,7 @@ func UserRegister(c *gin.Context) {
 	if err := c.ShouldBind(&UserRegister); err == nil {
 		res := UserRegister.Register(c.Request.Context()) //获取上下文
 		c.JSON(http.StatusOK, res)
+	} else {
+		c.JSON(http.StatusBadRequest, err)
 	}
 }

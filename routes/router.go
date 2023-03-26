@@ -1,6 +1,7 @@
 package routes
 
 import (
+	api "gin_mall_tmp/api/v1"
 	"gin_mall_tmp/middleware"
 	"github.com/gin-gonic/gin"
 	"net/http"
@@ -16,7 +17,7 @@ func NewRouter() *gin.Engine {
 			c.JSON(200, "success")
 		})
 		//用户操作
-		v1.POST("user/register", api.UserRegister)
+		v1.POST("/user/register", api.UserRegister)
 	}
 	return r
 }
