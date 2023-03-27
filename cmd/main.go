@@ -6,6 +6,7 @@ import (
 )
 
 func main() {
+	//guugi
 	conf.Init()
 	r := routes.NewRouter()
 	_ = r.Run(conf.HttpPort)
